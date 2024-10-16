@@ -1,0 +1,16 @@
+Multiple SquareCubes
+
+Stage 1 
+ Declare variable i as 0
+ Display using iteration statement to loop i from 0 to 10.
+Display using iteration statement to multiply i by i 
+Display using iteration statement to multiply i by i by i
+ 
+Stage 2
+Declare variable i as 0
+ Display using iteration statement to loop i from 0 to 10
+ Use format specifier %t for new tab
+ Display using iteration statement to multiply i by i to get square
+ Use format specifier %t for new tab
+Display using iteration statement to multiply i by i by i to get cube
+

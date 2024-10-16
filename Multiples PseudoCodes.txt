@@ -1,0 +1,32 @@
+Multiples PseudoCodes
+  	STAGE 1
+Prompt integer 1
+Collect
+Save
+Prompt integer 2
+Collect
+Save
+Multiply integer1 by 3
+Collect
+Save
+Multiply integer2 by 2
+Collect
+Save
+Divide integer multiplied 1 by integer 2 multiplied using remainder operator
+Display results using if statement
+
+	STAGE 2
+Prompt integer 1
+Collect value as int1
+Save value as int1
+Prompt integer 2
+Collect value as int2
+Save value as int2
+Multiply integer1 by 3
+Collect value as int1tripled
+Save value as int1tripled
+Multiply integer2 by 2
+Collect value as int2doubled
+Save value as int2doubled
+Divide integer multiplied 1 by integer 2 multiplied using remainder operator
+If int1tripled divides by int2doubled with 0 as a remainder, print integer 1 is a multiple of integer 2 else print integer 1 is not a multiple of integer 2.
