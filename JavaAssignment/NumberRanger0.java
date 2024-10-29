@@ -7,15 +7,15 @@ public class NumberRanger0 {
         int number1 = scanner.nextInt();
 	int number2 = scanner.nextInt();
         int number;
-        int maximumNumber = number1;
-	int minimumNumber = number2;
+	int maximumNumber = Math.max(number1, number2);
+	int minimumNumber = Math.min(number1, number2);
         do {
             System.out.println("Enter another number? A zero (0) input will end program");
             number = scanner.nextInt();
-            if (number > number1) {
+            if (number > maximumNumber) {
                 maximumNumber = number;
             }
-	     if (number < number2) {
+	     if (number < minimumNumber) {
                 minimumNumber = number;
             }
 
