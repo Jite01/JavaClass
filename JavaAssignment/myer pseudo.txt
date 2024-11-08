@@ -1,0 +1,15 @@
+The questionnaire has 20 questions... two columns
+
+Create an encompassing string array of 40 string arrays for the 20 questions with two columns
+
+Store the character traits in these arrays
+
+Create an int array for users response of size 20
+
+The int response array will have its variables either of 1 or 0... 
+
+If the first variable in the array is 1, it means the user resonated with the column B, if 0 the user resonated with the column A
+
+
+
+
