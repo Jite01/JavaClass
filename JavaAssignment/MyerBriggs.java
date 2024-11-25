@@ -6,27 +6,26 @@ public class MyersBriggsTest {
     
     public static void initializeQuestions() {
         // Column A vs Column B options
-        questions[0] = new String[]{"expend energy, enjoy groups", "conserve energy, enjoy one-on-one"};
-        questions[1] = new String[]{"interpret literally", "look for meaning and possibilities"};
-        questions[2] = new String[]{"logical, thinking, questioning", "empathetic, feeling, accommodating"};
-        questions[3] = new String[]{"organized, orderly", "flexible, adaptable"};
-        questions[4] = new String[]{"more outgoing, think out loud", "more reserved, think to yourself"};
-        questions[5] = new String[]{"practical, realistic, experiential", "imaginative, innovative, theoretical"};
-        questions[6] = new String[]{"candid, straight forward, frank", "tactful, kind, encouraging"};
-        questions[7] = new String[]{"plan, schedule", "unplanned, spontaneous"};
-        questions[8] = new String[]{"seek many tasks, public activities, interaction with others", "seek private, solitary activities with quiet to concentrate"};
-        questions[9] = new String[]{"standard, usual, conventional", "different, novel, unique"};
-        questions[10] = new String[]{"firm, tend to criticize, hold the line", "gentle, tend to appreciate, conciliate"};
-        questions[11] = new String[]{"regulated, structured", "easygoing, 'live' and 'let live'"};
-        questions[12] = new String[]{"external, communicative, express yourself", "internal, reticent, keep to yourself"};
-        questions[13] = new String[]{"focus on here-and-now", "look to the future, global perspective, 'big picture'"};
-        questions[14] = new String[]{"tough-minded, just", "tender-hearted, merciful"};
-        questions[15] = new String[]{"preparation, plan ahead", "go with the flow, adapt as you go"};
-        questions[16] = new String[]{"active, initiate", "reflective, deliberate"};
-        questions[17] = new String[]{"facts, things, 'what is'", "ideas, dreams, 'what could be,' philosophical"};
-        questions[18] = new String[]{"matter of fact, issue-oriented", "sensitive, people-oriented, compassionate"};
-        questions[19] = new String[]{"control, govern", "latitude, freedom"};
-    }
+        String[][] questions = {{"expend energy, enjoy groups"}, {"conserve energy, enjoy one-on-one"}};
+        String[][] questions = {{"interpret literally"}, {"look for meaning and possibilities"}};
+        String[][] questions = {{"logical, thinking, questioning"}, {"empathetic, feeling, accommodating"}};
+        String[][] questions = {{"organized, orderly"}, {"flexible, adaptable"}};
+        String[][] questions = {{"more outgoing, think out loud"}, {"more reserved, think to yourself"}};
+        String[][] questions = {{"practical, realistic, experiential"}, {"imaginative, innovative, theoretical"}};
+        String[][] questions = {{"candid, straight forward, frank"}, {"tactful, kind, encouraging"}};
+        String[][] questions = {{"plan, schedule"}, {"unplanned, spontaneous"}};
+        String[][] questions = {{"seek many tasks, public activities, interaction with others"}, {"seek private, solitary activities with quiet to concentrate"}};
+        String[][] questions = {{"standard, usual, conventional"}, {"different, novel, unique"}};
+        String[][] questions = {{"firm, tend to criticize, hold the line"}, {"gentle, tend to appreciate, conciliate"}};
+        String[][] questions = {{"regulated, structured"}, {"easygoing, 'live' and 'let live'"}};
+        String[][] questions = {{"external, communicative, express yourself"}, {"internal, reticent, keep to yourself"}};
+        String[][] questions = {{"focus on here-and-now"}, {"look to the future, global perspective, 'big picture'"}};
+        String[][] questions = {{"tough-minded, just"}, {"tender-hearted, merciful"}};
+        String[][] questions = {{"preparation, plan ahead"}, {"go with the flow, adapt as you go"}};
+        String[][] questions = {{"active, initiate"}, {"reflective, deliberate"}};
+        String[][] questions = {{"facts, things, 'what is'"}, {"ideas, dreams, 'what could be,' philosophical"}};
+        String[][] questions = {{"matter of fact, issue-oriented"}, {"sensitive, people-oriented, compassionate"}};
+        String[][] questions = {{"control, govern"}, {"latitude, freedom"}};
     
     public static void conductTest() {
         Scanner scanner = new Scanner(System.in);
