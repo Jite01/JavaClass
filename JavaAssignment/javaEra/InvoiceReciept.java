@@ -149,7 +149,7 @@ public class InvoiceReciept  {
 	System.out.printf("%-15s %-10s %-15s %-15.2f%n", "Amount Paid:", "", "", amountPaid); 
 	System.out.printf("%-15s %-10s %-15s %-15.2f%n", "Balance:", "", "", balance); 
     	System.out.println("====================================================================");
-    	System.out.println("THANK YOU FOR YOUR PATRONAGE");
+    	System.out.println("             "+"THANK YOU FOR YOUR PATRONAGE"+"             ");
 	System.out.println("==================================================================== ");
 				}
 			}
