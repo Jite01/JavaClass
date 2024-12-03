@@ -2,7 +2,23 @@ import java.util.Scanner;
 import java.util.Arrays;
 
 public class StudentGrade {
-public static void main (String[] args) {
+	static double[][] totalDatabase;
+	static int[] position;
+
+public static int getPosition (int index){
+	
+
+	for (int i = 0; i < totalDatabase.length; i++) {
+		for(int j = 0; j < totalDatabase[i].length; j++){
+			if (totalDatabase[i][0] < totalDatabase[i][j]);
+			position[i] += 1;
+			}
+	}
+	return position[index];
+	}
+
+	public static void main (String[] args) {
+
 	Scanner scanner = new Scanner(System.in);
 
 	System.out.println("How many students do you have?"); 
@@ -16,8 +32,10 @@ public static void main (String[] args) {
 	Saved successfully
 	""";
 	System.out.println(loadMmemonic);
+
 	int[][] database = new int [studentMean][subjectMean];
-	double[][] totalDatabase = new double [studentMean][1];
+	totalDatabase = new double [studentMean][1];
+	position = new int[studentMean];
 
 
 	for(int i = 0 ; i <= studentMean; i++){
@@ -61,7 +79,7 @@ public static void main (String[] args) {
 				}
 		System.out.printf((totalDatabase[i][0]) + "%-6s", "" );
 		System.out.printf(((totalDatabase[i][0]) / 2) + "%-6s", "" );
-
+		System.out.printf("%s" + "%-6s", getPosition(i), "" );
 		}
 		
 			
