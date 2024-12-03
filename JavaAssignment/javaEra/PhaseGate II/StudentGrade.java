@@ -1,20 +1,22 @@
 import java.util.Scanner;
 import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Collections;
+
 
 public class StudentGrade {
 	static double[][] totalDatabase;
 	static ArrayList<Double> position;
 
 public static void getPosition() {
-	
+	position = new ArrayList<>();
 	for (int i = 0; i < totalDatabase.length; i++) {
 		position.add(totalDatabase[i][0]);
-			}
-	System.out.print(position);
 		}
-
-
+	Collections.sort(position);
+	Collections.reverse(position);
+	System.out.print(position);
+	}
 
 	public static void main (String[] args) {
 
