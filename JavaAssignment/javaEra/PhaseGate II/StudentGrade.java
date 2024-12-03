@@ -17,6 +17,8 @@ public static void main (String[] args) {
 	""";
 	System.out.println(loadMmemonic);
 	double[][] database = new double [studentMean][subjectMean];
+	double[][] totalDatabase = new double [studentMean][subjectMean];
+
 
 	for(int i = 0 ; i <= studentMean; i++){
 		if ( i >= studentMean) continue;
@@ -26,16 +28,35 @@ public static void main (String[] args) {
         	System.out.flush();
 
 		System.out.println(loadMmemonic);
-		System.out.println("Enter score for student"+( i + 1) + " for subject"+ (j + 1));
+		System.out.println("Entering score for student "+( i + 1) + "\n" + " Enter score for subject"+ (j + 1));
 		database[i][j] = scanner.nextInt();
-		
-		
+		totalDatabase[i][]
 			}
-	
 	}
 	
 
+	System.out.println("====================================================================");
+	System.out.printf("STUDENT %-7s", "");
 
+	for(int j = 0 ; j <= subjectMean; j++){
+	if ( j >= subjectMean) continue;
+	System.out.printf("SUB" + (j  + 1) + "%-4s", "" );
+		}
+		
+	System.out.printf("TOT %-4s AVE %-7s POS%n", "", "");
+	System.out.println("====================================================================");
+	
+	for(int i = 0 ; i <= studentMean; i++){
+		if ( i >= studentMean) continue;
+		System.out.printf("%n");
+		System.out.printf("Student "+( i + 1) + "%-7s", "");
+			for(int j = 0 ; j <= subjectMean; j++){
+				if ( j >= subjectMean) continue;
+	
+				System.out.printf((database[i][j]) + "%-4s", "" ); 
+				
+					}
+		}
 	
 			
 		
