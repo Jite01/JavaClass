@@ -16,8 +16,8 @@ public static void main (String[] args) {
 	Saved successfully
 	""";
 	System.out.println(loadMmemonic);
-	double[][] database = new double [studentMean][subjectMean];
-	double[][] totalDatabase = new double [studentMean][subjectMean];
+	int[][] database = new int [studentMean][subjectMean];
+	double[][] totalDatabase = new double [studentMean][1];
 
 
 	for(int i = 0 ; i <= studentMean; i++){
@@ -30,10 +30,13 @@ public static void main (String[] args) {
 		System.out.println(loadMmemonic);
 		System.out.println("Entering score for student "+( i + 1) + "\n" + " Enter score for subject"+ (j + 1));
 		database[i][j] = scanner.nextInt();
-		totalDatabase[i][]
+		totalDatabase[i][0] += database[i][j];
 			}
 	}
 	
+	System.out.println("\033[H\033[2J");
+        	System.out.flush();
+
 
 	System.out.println("====================================================================");
 	System.out.printf("STUDENT %-7s", "");
@@ -47,17 +50,20 @@ public static void main (String[] args) {
 	System.out.println("====================================================================");
 	
 	for(int i = 0 ; i <= studentMean; i++){
+		
 		if ( i >= studentMean) continue;
 		System.out.printf("%n");
 		System.out.printf("Student "+( i + 1) + "%-7s", "");
 			for(int j = 0 ; j <= subjectMean; j++){
 				if ( j >= subjectMean) continue;
 	
-				System.out.printf((database[i][j]) + "%-4s", "" ); 
-				
-					}
+				System.out.printf((database[i][j]) + "%-6s", "" ); 
+				}
+		System.out.printf((totalDatabase[i][0]) + "%-6s", "" );
+		System.out.printf(((totalDatabase[i][0]) / 2) + "%-6s", "" );
+
 		}
-	
+		
 			
 		
 
