@@ -10,7 +10,7 @@ public static int getPosition (int index){
 
 	for (int i = 0; i < totalDatabase.length; i++) {
 		for(int j = 0; j < totalDatabase[i].length; j++){
-			if (totalDatabase[i][0] < totalDatabase[i][j]);
+			if (totalDatabase[i][0] >=  totalDatabase[j][0]);
 			position[i] += 1;
 			}
 	}
@@ -81,6 +81,12 @@ public static int getPosition (int index){
 		System.out.printf(((totalDatabase[i][0]) / 2) + "%-6s", "" );
 		System.out.printf("%s" + "%-6s", getPosition(i), "" );
 		}
+	
+	System.out.print("""
+\n
+====================================================================
+====================================================================
+""");
 		
 			
 		
