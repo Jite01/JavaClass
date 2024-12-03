@@ -1,21 +1,20 @@
 import java.util.Scanner;
 import java.util.Arrays;
+import java.util.ArrayList;
 
 public class StudentGrade {
 	static double[][] totalDatabase;
-	static int[] position;
+	static ArrayList<Double> position;
 
-public static int getPosition (int index){
+public static void getPosition() {
 	
-
 	for (int i = 0; i < totalDatabase.length; i++) {
-		for(int j = 0; j < totalDatabase[i].length; j++){
-			if (totalDatabase[i][0] >=  totalDatabase[j][0]);
-			position[i] += 1;
+		position.add(totalDatabase[i][0]);
 			}
-	}
-	return position[index];
-	}
+	System.out.print(position);
+		}
+
+
 
 	public static void main (String[] args) {
 
@@ -35,7 +34,6 @@ public static int getPosition (int index){
 
 	int[][] database = new int [studentMean][subjectMean];
 	totalDatabase = new double [studentMean][1];
-	position = new int[studentMean];
 
 
 	for(int i = 0 ; i <= studentMean; i++){
@@ -79,7 +77,7 @@ public static int getPosition (int index){
 				}
 		System.out.printf((totalDatabase[i][0]) + "%-6s", "" );
 		System.out.printf(((totalDatabase[i][0]) / 2) + "%-6s", "" );
-		System.out.printf("%s" + "%-6s", getPosition(i), "" );
+		System.out.printf("%s" + "%-6s","", "" );
 		}
 	
 	System.out.print("""
@@ -92,7 +90,7 @@ public static int getPosition (int index){
 		
 
 		
-		
+	getPosition();
 
 	
 			}
