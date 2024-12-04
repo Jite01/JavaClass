@@ -8,14 +8,26 @@ public class StudentGrade {
 	static double[][] totalDatabase;
 	static ArrayList<Double> position;
 
-public static void getPosition() {
+public static int getPosition(double[][] totalDatabase, double currentTotal) {
 	position = new ArrayList<>();
 	for (int i = 0; i < totalDatabase.length; i++) {
 		position.add(totalDatabase[i][0]);
-		}
+			}
 	Collections.sort(position);
 	Collections.reverse(position);
-	System.out.print(position);
+	
+	int actualPosition = (position.indexOf(currentTotal) + 1);
+	return actualPosition;
+	}
+
+
+public static double getHighest (double[][] database, int index) {
+
+	double largest = database[0][index];
+	for (int i = 0; i < database.length; i++){
+		if (largest <= database[i][index]) largest = database[i][index];
+		}
+	return largest;
 	}
 
 	public static void main (String[] args) {
@@ -74,14 +86,15 @@ public static void getPosition() {
 		System.out.printf("Student "+( i + 1) + "%-7s", "");
 			for(int j = 0 ; j <= subjectMean; j++){
 				if ( j >= subjectMean) continue;
-	
-				System.out.printf((database[i][j]) + "%-6s", "" ); 
+				System.out.printf((database[i][j]) + "%-6s", "");
 				}
 		System.out.printf((totalDatabase[i][0]) + "%-6s", "" );
 		System.out.printf(((totalDatabase[i][0]) / 2) + "%-6s", "" );
-		System.out.printf("%s" + "%-6s","", "" );
+		System.out.printf("%-1s%s","",getPosition(totalDatabase, totalDatabase[i][0]));
+		
 		}
 	
+	 
 	System.out.print("""
 \n
 ====================================================================
@@ -89,14 +102,36 @@ public static void getPosition() {
 """);
 		
 			
-		
+	for(int i = 0 ; i <= studentMean; i++){
+		if ( i >= studentMean) continue;
+		System.out.printf("SUBJECT SUMMARY%n");
+		for(int j = 0 ; j <= subjectMean; j++){
+		if ( j >= subjectMean) continue;
+
+	 /**for (int j = 0; j < subjectMean; j++) {
+            System.out.printf("Subject %d%n", j + 1);
+            double highestScore = getHighest(database, j);
+            int highestStudent = 0;
+            for (int i = 0; i < studentMean; i++) {
+                if (database[i][j] == highestScore) {
+                    highestStudent = i + 1;
+                    break;
 
 		
-	getPosition();
+		System.out.println("Subject " + (j + 1));
+		System.out.printf("Highest Scoring Student is: Student %d" + "scoring %.2f%n", (j + 1), getHighest(database[(double)i][(double)j], j)); */
+			}
+            }
+
 
 	
+		
+		
+	
+
+				}	
+			
 			}
-	}
 
 	
 
