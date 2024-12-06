@@ -23,7 +23,7 @@ static BankeATM atm = new BankeATM();
 
 						4: Check Account Balance
 
-						5: Transfer To Anothr register User
+						5: Transfer To Anothr Banke User
 
 						6: Change PIN
 

@@ -69,7 +69,7 @@ static double amount;
 	System.out.printf("%n%n<-------------------------------------------");
 
 	if (atm.menuResponse == 2) {
-	System.out.print("How Much Do You Want To Deposit?----------------------------------------->\nDeposit Amount:");
+	System.out.print("How Much Do You Want To Deposit?----------------------------------------->\nDeposit Amount  $:");
 	amount = scanner.nextDouble();
 	balanceChange(amount);
 		}
@@ -80,14 +80,14 @@ static double amount;
         System.out.flush();
 
 	System.out.printf("%n%s%.2f%n","Your  Balance Is ", register.bankeAccountBalanceRegister.get(litmus));
-	System.out.print("How Much Do You Want To Withdraw?----------------------------------------->\nWithdraw Amount:");
+	System.out.print("How Much Do You Want To Withdraw?----------------------------------------->\nWithdraw Amount  $:");
 	amount = scanner.nextDouble();
 
 	while (amount > register.bankeAccountBalanceRegister.get(litmus)) {
 	System.out.printf("%nInsufficient Funds.....%n");
 	
 	System.out.printf("%n%s%.2f%n","Your  Balance Is ", register.bankeAccountBalanceRegister.get(litmus));
-	System.out.print("How Much Do You Want To Withdraw?----------------------------------------->\nWithdraw Amount:");
+	System.out.print("How Much Do You Want To Withdraw?----------------------------------------->\nWithdraw Amount  $:");
 	amount = scanner.nextDouble();
 			}
 	balanceDeduct(amount);
@@ -104,13 +104,13 @@ static double amount;
 	}
 
 	else if (atm.menuResponse == 6) {
-	System.out.print("How Much Do You Want To Withdraw?----------------------------------------->\nWithdraw Amount:");
+	System.out.print("How Much Do You Want To Withdraw?----------------------------------------->\nWithdraw Amount  $:");
 	amount = scanner.nextDouble();
 	balanceDeduct(amount);
 		}
 
 	else if (atm.menuResponse == 7) {
-	System.out.print("How Much Do You Want To Withdraw?----------------------------------------->\nWithdraw Amount:");
+	System.out.print("How Much Do You Want To Withdraw?----------------------------------------->\nWithdraw Amount  $:");
 	amount = scanner.nextDouble();
 	balanceDeduct(amount);
 		}
@@ -298,7 +298,7 @@ System.out.print("""
 	public static void transferAmount() {
 
 	System.out.print("""
-	 						Indicate Account You Want To Transfer To With:
+	 						Transfer To Account With:
 
   
 					1:  Account Name?     	    / 	        2:  Account Number?
@@ -312,9 +312,9 @@ System.out.print("""
 
 	switch (verifyAccountResponse) {
 	
-	case 1:	System.out.print("Enter Your First Name->\nFirstName->\n");
+	case 1:	System.out.print("Enter Recipient's First Name->\nFirstName->\n");
 			String firstNameTemp = scanner.next();
-			System.out.print("\nEnter Your Last Name->\nLastName->\n");
+			System.out.print("\nEnter Recipient's Last Name->\nLastName->\n");
 			String lastNameTemp = scanner.next();
 			String space = " ";
 			System.out.println("\033[H\033[2J");
@@ -405,7 +405,7 @@ System.out.print("""
 
 	public static void transferBlock(double amount) {
 
-	System.out.printf("%n\tYou are about to Transfer %f to %s.%n\t 	1: Proceed 		/       2:  Go back%n", amount,  register.bankeAccountRegister.get(recipientLitmus));
+	System.out.printf("%n\tYou are about to Transfer %.2f to %s.%n\t 	1: Proceed 		/       2:  Go back%n", amount,  register.bankeAccountRegister.get(recipientLitmus));
 	int transferAction = scanner.nextInt();
 
 	switch (transferAction) {
@@ -418,7 +418,7 @@ System.out.print("""
 	register.bankeAccountBalanceRegister.set(litmus, (register.bankeAccountBalanceRegister.get(litmus) - amount));
 	register.bankeAccountBalanceRegister.set(recipientLitmus, (register.bankeAccountBalanceRegister.get(recipientLitmus) + amount));
 
-	System.out.printf("Success! You've Sent %f To %s", amount, register.bankeAccountRegister.get(recipientLitmus));
+	System.out.printf("Success! You've Sent %.2f To %s", amount, register.bankeAccountRegister.get(recipientLitmus));
 
 	System.out.print("""
 
@@ -457,16 +457,24 @@ System.out.print("""
 
 	public static int closeAccount() {
 		
-	System.out.println("\033[H\033[2J");
-        System.out.flush();
-
 	System.out.print("""
 
 								Sorry it had to be this way...
 
-	""");
-	return litmus;
 
+	""");
+	int frisk = scanner.nextInt();
+	
+	System.out.println("\033[H\033[2J");
+        System.out.flush();
+
+	System.out.print("""            	
+						        You Have Deleted Your Account.
+	""");
+	closeAccount();
+	atm.bankeMenu();
+	return litmus;
+	
 		}
 
 } //class
