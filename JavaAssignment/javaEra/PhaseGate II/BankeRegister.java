@@ -9,6 +9,7 @@ ArrayList<Integer> bankeAccountPinRegister = new ArrayList <>();
 ArrayList<Double> bankeAccountBalanceRegister = new ArrayList <>(Collections.nCopies(100, 0.0));
 
 static BankeATM atm = new BankeATM();
+static BankeMenuMethods method = new BankeMenuMethods();
 
 
 	public int generateAccountNumber() {
@@ -35,7 +36,14 @@ static BankeATM atm = new BankeATM();
 
 	   }
 
-	
+	public void closeAccount() {
+
+	 bankeAccountRegister.remove(method.closeAccount());
+	 bankeAccountNumberRegister.remove(method.closeAccount());
+	 bankeAccountPinRegister.remove(method.closeAccount());
+	 bankeAccountBalanceRegister.remove(method.closeAccount());
+
+	}
 
    }
 	

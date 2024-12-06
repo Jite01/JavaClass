@@ -41,9 +41,20 @@ static BankeATM atm = new BankeATM();
 		case 2: method.depositMoney();
 			break;
 
-		case 3: method. verifyAccount(0);
+		case 3: method.depositMoney();
 			break;
 
+		case 4: method.depositMoney();
+			break;
+
+		case 5: method.transferAmount();
+			break;
+
+		case 6: method.depositMoney();
+			break;
+
+		case 7: method.depositMoney();
+			break;
 		}
 
 	}
